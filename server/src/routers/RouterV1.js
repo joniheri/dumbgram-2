@@ -34,23 +34,31 @@ router.patch("/updatetododb/:idParam", updateTodoDB);
 router.delete("/deletetododb/:idParam", deleteTodoDB);
 // EndTodosRouter
 
-// // UsersRouter
-// const {
-//   getUsers,
-//   getUsersHasManyTransaction,
-//   getUserById,
-//   addUser,
-//   updateUser,
-//   deleteUser,
-// } = require("../controllers/versi1/User");
+// AuthRoute
+const {
+  registerAuth,
+  loginAuth,
+  //   checkAuth,
+} = require("../controllers/versi1/Auth");
 
-// router.get("/users", getUsers);
-// router.get("/users-transaction", getUsersHasManyTransaction);
-// router.get("/user/:id", getUserById);
-// router.post("/add-user", addUser);
-// router.patch("/update-user/:idparam", updateUser);
-// router.delete("/delete-user/:idparam", deleteUser);
-// // EndUsersRouter
+router.post("/register", registerAuth);
+router.post("/login", loginAuth);
+// router.get("/check-auth", AuthMiddleware, checkAuth);
+// EndAuthRoute
+
+// UsersRouter
+const {
+  getUsers,
+  getUserById,
+  updateUser,
+  deleteUser,
+} = require("../controllers/versi1/User");
+
+router.get("/users", getUsers);
+router.get("/user/:idParam", getUserById);
+router.patch("/updateuser/:idParam", updateUser);
+router.delete("/deleteuser/:idParam", deleteUser);
+// EndUsersRouter
 
 // // ArtistRoute
 // const {
@@ -122,18 +130,6 @@ router.delete("/deletetododb/:idParam", deleteTodoDB);
 // // router.patch("/update-artist/:idParam", updateArtist);
 // // router.delete("/delete-artist/:idParam", deleteArtist);
 // // EndAuthorRoute
-
-// // AuthRoute
-// const {
-//   registerAuth,
-//   loginAuth,
-//   checkAuth,
-// } = require("../controllers/versi1/Auth");
-
-// router.post("/register", registerAuth);
-// router.post("/login", loginAuth);
-// router.get("/check-auth", AuthMiddleware, checkAuth);
-// // EndAuthRoute
 
 // // TransactionRoute
 // const {

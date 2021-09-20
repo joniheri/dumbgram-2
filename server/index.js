@@ -5,6 +5,9 @@ const port = 3001;
 // app use exxpress.json to get req body JSON
 app.use(express.json());
 
+// import dotenv
+require("dotenv").config();
+
 // import cors module
 const cors = require("cors");
 app.use(cors());
