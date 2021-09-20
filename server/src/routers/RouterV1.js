@@ -6,23 +6,33 @@ const router = express.Router();
 // const { AuthMiddleware } = require("../middleware/Auth");
 // const { UploadFiles } = require("../middleware/UploadFiles");
 
-// // TodosRouter
-// const {
-//   getTodos,
-//   getTodo,
-//   addTodo,
-//   updateTodoPatch,
-//   updateTodoPut,
-//   deleteTodo,
-// } = require("../controllers/versi1/Todos");
+// TodosRouter
+const {
+  getTodos,
+  getTodo,
+  addTodo,
+  updateTodoPatch,
+  updateTodoPut,
+  deleteTodo,
+  getTodosDB,
+  getTodoDB,
+  addTodoDB,
+  updateTodoDB,
+  deleteTodoDB,
+} = require("../controllers/versi1/Todos");
 
-// router.get("/todos", getTodos);
-// router.get("/todo/:id", getTodo);
-// router.post("/todos", addTodo);
-// router.patch("/updatetodo/:id", updateTodoPatch);
-// router.put("/updatetodo-put/:id", updateTodoPut);
-// router.delete("/deletetodo/:id", deleteTodo);
-// // EndTodosRouter
+router.get("/todos", getTodos);
+router.get("/todo/:id", getTodo);
+router.post("/addtodo", addTodo);
+router.patch("/updatetodo/:id", updateTodoPatch);
+router.put("/updatetodo-put/:id", updateTodoPut);
+router.delete("/deletetodo/:id", deleteTodo);
+router.get("/todosdb", getTodosDB);
+router.get("/tododb/:idParam", getTodoDB);
+router.post("/addtododb", addTodoDB);
+router.patch("/updatetododb/:idParam", updateTodoDB);
+router.delete("/deletetododb/:idParam", deleteTodoDB);
+// EndTodosRouter
 
 // // UsersRouter
 // const {
