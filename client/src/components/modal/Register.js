@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { Button, Form, Modal } from "react-bootstrap";
+import { Button, Form, Modal, Alert } from "react-bootstrap";
+
+// import API
+import { API } from "../../config/Api";
 
 // import components
 import ModalAlert from "./Alert";
@@ -15,12 +18,10 @@ export default function Register({
   const [alertShow, setAlertShow] = useState(false);
 
   const [formData, setFormData] = useState({
-    fullname: "",
     email: "",
+    fullName: "",
+    username: "",
     password: "",
-    gender: "",
-    phone: "",
-    address: "",
   });
 
   const handleOnChange = (e) => {
@@ -30,7 +31,63 @@ export default function Register({
     });
   };
 
-  const handleOnSubmit = async (e) => {};
+  const handleOnSubmit = async (e) => {
+    try {
+      e.preventDefault();
+
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+        },
+      };
+
+      const body = JSON.stringify({ ...formData });
+
+      // console.log("PrintBody: ", body);
+
+      const response = await API.post("/register", body, config); //-->this is sintact to inset to database
+
+      console.log("DataSaved: ", response);
+
+      // CheckValidationInput
+      if (response.data.status === "Validate Failed") {
+        setMessageShowFailed(response.data.message);
+        setMessageVariant("danger");
+      }
+      // EndCheckValidationInput
+
+      // CheckEmail
+      else if (response.data.status === "Email Failed") {
+        setMessageShowFailed(response.data.message);
+        setMessageVariant("danger");
+      }
+      // EndCheckEmail
+
+      //CheckEmailOrConnection
+      else if (response.data.status === "Response Failed") {
+        setMessageShowFailed(response.data.message);
+        setMessageVariant("danger");
+      }
+      //EndCheckEmailOrPasswordNotMatch===========
+
+      // IfSuccess
+      else {
+        setMessageShowFailed("");
+        setMessageShowSuccess("Register Success.");
+        setFormData({
+          email: "",
+          fullName: "",
+          username: "",
+          password: "",
+        });
+        setRegisterShow(false);
+        setAlertShow(true);
+      }
+      // EndIfSuccess
+    } catch (error) {
+      console.log("ErrorTryCath", error);
+    }
+  };
 
   return (
     <div>
@@ -42,12 +99,10 @@ export default function Register({
           setMessageShowFailed("");
           setMessageVariant("");
           setFormData({
-            fullname: "",
             email: "",
+            fullName: "",
+            username: "",
             password: "",
-            gender: "",
-            phone: "",
-            address: "",
           });
         }}
         aria-labelledby="example-modal-sizes-title-sm"
@@ -61,10 +116,8 @@ export default function Register({
           <Modal.Title id="example-modal-sizes-title-sm">Register</Modal.Title>
         </Modal.Header>
         <Modal.Body className="bg-modal" style={{ background: "#1F1F1F" }}>
-          {messageShowFailed != "" && (
-            <ModalAlert variant={messageVariant}>
-              {messageShowFailed}
-            </ModalAlert>
+          {messageShowFailed !== "" && (
+            <Alert variant={messageVariant}>{messageShowFailed}</Alert>
           )}
           <Form onSubmit={handleOnSubmit}>
             <Form.Group controlId="formFile" className="mb-3">
@@ -73,6 +126,34 @@ export default function Register({
                 name="email"
                 type="email"
                 placeholder="Email"
+                required
+                style={{
+                  margin: "0 0 15px 0",
+                  background: "#4b4b4b",
+                  color: "#fff",
+                }}
+              />
+            </Form.Group>
+            <Form.Group controlId="formFile" className="mb-3">
+              <Form.Control
+                onChange={handleOnChange}
+                name="fullName"
+                type="text"
+                placeholder="Full Name"
+                required
+                style={{
+                  margin: "0 0 15px 0",
+                  background: "#4b4b4b",
+                  color: "#fff",
+                }}
+              />
+            </Form.Group>
+            <Form.Group controlId="formFile" className="mb-3">
+              <Form.Control
+                onChange={handleOnChange}
+                name="username"
+                type="text"
+                placeholder="Username"
                 required
                 style={{
                   margin: "0 0 15px 0",
@@ -95,72 +176,7 @@ export default function Register({
                 }}
               />
             </Form.Group>
-            <Form.Group controlId="formFile" className="mb-3">
-              <Form.Control
-                onChange={handleOnChange}
-                name="fullname"
-                type="text"
-                placeholder="Full Name"
-                required
-                style={{
-                  margin: "0 0 15px 0",
-                  background: "#4b4b4b",
-                  color: "#fff",
-                }}
-              />
-            </Form.Group>
-            <Form.Group controlId="formFile" className="mb-3">
-              <Form.Control
-                onChange={handleOnChange}
-                name="gender"
-                type="text"
-                placeholder="Gender"
-                required
-                style={{
-                  margin: "0 0 15px 0",
-                  background: "#4b4b4b",
-                  color: "#fff",
-                }}
-              />
-            </Form.Group>
-            <Form.Group controlId="formFile" className="mb-3">
-              <Form.Control
-                onChange={handleOnChange}
-                name="phone"
-                type="text"
-                placeholder="Phone"
-                required
-                style={{
-                  margin: "0 0 15px 0",
-                  background: "#4b4b4b",
-                  color: "#fff",
-                }}
-              />
-            </Form.Group>
-            <Form.Group controlId="formFile" className="mb-3">
-              <Form.Control
-                onChange={handleOnChange}
-                name="address"
-                type="text"
-                placeholder="Address"
-                required
-                style={{
-                  margin: "0 0 15px 0",
-                  background: "#4b4b4b",
-                  color: "#fff",
-                }}
-              />
-            </Form.Group>
-            <Button
-              type="submit"
-              className="btn-register2"
-              style={{
-                width: "100%",
-                margin: "20px 0 0 0",
-                background: "#EE4622",
-                borderColor: "#EE4622",
-              }}
-            >
+            <Button type="submit" className="btnModalLogin">
               Register
             </Button>
             <center>
@@ -180,7 +196,9 @@ export default function Register({
                 </strong>
               </p>
             </center>
-            {/* <pre style={{ color: "#fff" }}>{JSON.stringify(form, null, 3)}</pre> */}
+            {/* <pre style={{ color: "#fff" }}>
+              {JSON.stringify(formData, null, 3)}
+            </pre> */}
           </Form>
         </Modal.Body>
       </Modal>

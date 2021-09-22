@@ -79,16 +79,7 @@ export default function Login({ loginShow, setLoginShow, setRegisterShow }) {
                 color: "#fff",
               }}
             />
-            <Button
-              type="submit"
-              className="btn-register2"
-              style={{
-                width: "100%",
-                margin: "20px 0 0 0",
-                background: "#EE4622",
-                borderColor: "#EE4622",
-              }}
-            >
+            <Button type="submit" className="btnModalLogin">
               Login
             </Button>
             <center>

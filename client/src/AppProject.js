@@ -1,5 +1,8 @@
 import React from "react";
 
+// import css
+import "./css/StyleApp.css";
+
 // import bootstrap components
 import { Container } from "react-bootstrap";
 

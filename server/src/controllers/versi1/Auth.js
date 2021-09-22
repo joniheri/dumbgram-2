@@ -38,7 +38,7 @@ exports.registerAuth = async (req, res) => {
     });
     if (findEmail) {
       return res.send({
-        status: "Failed",
+        status: "Email Failed",
         message: `Email: ${data.email} already registered`,
         dataFindEmail: findEmail,
       });

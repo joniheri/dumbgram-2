@@ -43,6 +43,7 @@ const reducer = (state, action) => {
         user: null,
         isLoading: false,
       };
+
     case "ADD_CART":
       const checkExistProduct = state.carts.filter(
         (product) => product.id === action.payload.id
@@ -61,7 +62,6 @@ const reducer = (state, action) => {
           ),
         };
       }
-
       return {
         ...state,
         carts: [
@@ -72,6 +72,7 @@ const reducer = (state, action) => {
           },
         ],
       };
+
     case "REMOVE_CART":
       return {
         ...state,
@@ -79,6 +80,7 @@ const reducer = (state, action) => {
           (product) => product.id !== action.payload.id
         ),
       };
+
     case "REMOVE_CART_ITEM":
       const checkExistProductItem = state.carts.filter(
         (product) => product.id === action.payload.id

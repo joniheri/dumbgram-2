@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import { Col, Row } from "react-bootstrap";
-
-// import css
-import "../css/Landing.css";
+import { Col, Row, Spinner } from "react-bootstrap";
 
 // import image
 import DumbGram from "../img/DumbGram.png";

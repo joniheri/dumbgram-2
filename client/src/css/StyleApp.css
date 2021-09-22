@@ -7,6 +7,24 @@
   margin-left: 100px;
 }
 
+.itemJustifyLeft {
+  align-items: center;
+  display: flex;
+  justify-content: left;
+}
+
+.itemJustifyCenter {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.itemJustifyRight {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 .fontSize1 {
   font-size: 55px;
 }
@@ -48,4 +66,16 @@
   padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+.btnModalLogin {
+  background: linear-gradient(
+    90deg,
+    #4dd4f7 0%,
+    #9090fb 36.46%,
+    #ff6b81 71.35%,
+    #fbdf63 100%
+  );
+  width: 100%;
+  margin: 20px 0 0 0;
 }
