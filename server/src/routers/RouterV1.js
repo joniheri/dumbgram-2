@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 // // ImportMiddleware
-// const { AuthMiddleware } = require("../middleware/Auth");
+const { AuthMiddleware } = require("../middleware/Auth");
 // const { UploadFiles } = require("../middleware/UploadFiles");
 
 // TodosRouter
@@ -38,12 +38,12 @@ router.delete("/deletetododb/:idParam", deleteTodoDB);
 const {
   registerAuth,
   loginAuth,
-  //   checkAuth,
+  checkAuth,
 } = require("../controllers/versi1/Auth");
 
 router.post("/register", registerAuth);
 router.post("/login", loginAuth);
-// router.get("/check-auth", AuthMiddleware, checkAuth);
+router.get("/check-auth", AuthMiddleware, checkAuth);
 // EndAuthRoute
 
 // UsersRouter
