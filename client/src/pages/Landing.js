@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Col, Row, Spinner } from "react-bootstrap";
+import { Col, Container, Row, Spinner } from "react-bootstrap";
 
 // import context
 import { AppContext } from "../contexts/GlobalContext";
@@ -40,7 +40,7 @@ export default function Landing({ stateLogin, setStateLogin }) {
   return (
     <div className="body">
       {state.user === null ? (
-        <>
+        <Container>
           <Row>
             <Col md={5}>
               <Row>
@@ -145,7 +145,7 @@ export default function Landing({ stateLogin, setStateLogin }) {
             setLoginShow={setLoginShow}
           />
           {/* EndModalRegister */}
-        </>
+        </Container>
       ) : (
         <>{history.push("/homeuser")}</>
       )}

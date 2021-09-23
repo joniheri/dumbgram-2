@@ -18,8 +18,7 @@ const reducer = (state, action) => {
         isLogin: true,
         user: {
           email: action.payload.email,
-          fullname: action.payload.fullname,
-          level: action.payload.level,
+          fullname: action.payload.fullName,
         },
         isLoading: false,
       };
@@ -29,8 +28,7 @@ const reducer = (state, action) => {
         isLogin: true,
         user: {
           email: action.payload.email,
-          fullname: action.payload.fullname,
-          level: action.payload.level,
+          fullname: action.payload.fullName,
         },
         isLoading: false,
       };

@@ -1,3 +1,52 @@
+/* EndScrollbar */
+body {
+  overflow: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #0b0b0b;
+  /* border-radius: 10px; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #363536;
+  border-radius: 7px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1a1b1b;
+}
+
+div.left {
+  width: 550px;
+  height: 720px;
+  overflow: hidden;
+}
+
+div.left:hover {
+  overflow: auto;
+}
+
+div.right {
+  width: 100%;
+  height: 720px;
+  overflow: hidden;
+}
+
+div.right:hover {
+  overflow: auto;
+}
+/* EndScrollbar */
+/* ========================================================= */
+
 .colorWhite {
   color: #ffffff;
 }
@@ -78,4 +127,8 @@
   );
   width: 100%;
   margin: 20px 0 0 0;
+}
+
+.colorText1 {
+  color: #ababab;
 }

@@ -101,7 +101,7 @@ export default function Login({ loginShow, setLoginShow, setRegisterShow }) {
           alertMessage: "",
           alertVariant: "success",
         });
-        console.log("ResponseData: ", response);
+        // console.log("ResponseData: ", response);
         setAuthToken(response.data.token);
         history.push("/homeuser");
         setLoginShow(false);
