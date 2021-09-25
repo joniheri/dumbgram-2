@@ -12,6 +12,8 @@ import { AppContext } from "../contexts/GlobalContext";
 import Edit from "../img/edit.png";
 import Rectangle4 from "../img/Rectangle 4.png";
 import Home from "../img/Home.png";
+import Compass from "../img/Compass.png";
+import Exit from "../img/Exit.png";
 
 export default function SidebarMenu() {
   const history = useHistory();
@@ -174,7 +176,7 @@ export default function SidebarMenu() {
       <div className="colorText1" style={{ paddingTop: "25px" }}>
         <Link to="/explore" className="itemJustifyLeft btnHover1 colorText1">
           <img
-            src={Home}
+            src={Compass}
             alt=""
             style={{
               paddingRight: "20px",
@@ -192,10 +194,13 @@ export default function SidebarMenu() {
       {/* EndBorderBottom */}
 
       {/* Logout */}
-      <div className="colorText1" style={{ paddingTop: "25px" }}>
+      <div
+        className="colorText1"
+        style={{ paddingTop: "25px", paddingBottom: "50px" }}
+      >
         <div className="itemJustifyLeft btnHover1" onClick={handleLogout}>
           <img
-            src={Home}
+            src={Exit}
             alt=""
             style={{
               paddingRight: "20px",

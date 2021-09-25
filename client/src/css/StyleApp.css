@@ -150,7 +150,7 @@ div.right:hover {
   border: none;
 }
 
-.btnCreatePost {
+.btn1 {
   background: linear-gradient(
     90deg,
     #4dd4f7 0%,
@@ -158,8 +158,17 @@ div.right:hover {
     #ff6b81 71.35%,
     #fbdf63 100%
   );
-  width: 130px;
-  height: 33px;
-  border-radius: 4px;
   cursor: pointer;
+  border-radius: 4px;
+  border: none;
+}
+
+.input1 {
+  width: 100%;
+  background: #232323;
+  border: 1px solid #ababab;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #ababab;
 }

@@ -120,7 +120,6 @@ export default function Feed() {
                 display: "flex",
                 paddingTop: "5px",
                 paddingBottom: "5px",
-                paddingRight: "5px",
               }}
             >
               <div
@@ -211,7 +210,6 @@ export default function Feed() {
                 display: "flex",
                 paddingTop: "5px",
                 paddingBottom: "5px",
-                paddingRight: "5px",
               }}
             >
               <div
@@ -302,7 +300,6 @@ export default function Feed() {
                 display: "flex",
                 paddingTop: "5px",
                 paddingBottom: "5px",
-                paddingRight: "5px",
               }}
             >
               <div
@@ -393,7 +390,6 @@ export default function Feed() {
                 display: "flex",
                 paddingTop: "5px",
                 paddingBottom: "5px",
-                paddingRight: "5px",
               }}
             >
               <div
@@ -484,7 +480,6 @@ export default function Feed() {
                 display: "flex",
                 paddingTop: "5px",
                 paddingBottom: "5px",
-                paddingRight: "5px",
               }}
             >
               <div

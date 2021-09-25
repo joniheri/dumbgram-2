@@ -8,10 +8,6 @@ import Rectangle8_1 from "../img/Rectangle8_1.png";
 import Rectangle6_2 from "../img/Rectangle6_2.png";
 import Rectangle10_2 from "../img/Rectangle10_2.png";
 import Rectangle5 from "../img/Rectangle 5.png";
-import Ellipse1 from "../img/Ellipse1.png";
-import Heart from "../img/Heart.svg";
-import Comment from "../img/Comment.svg";
-import Plan from "../img/Plan.svg";
 
 export default function Explore() {
   return (

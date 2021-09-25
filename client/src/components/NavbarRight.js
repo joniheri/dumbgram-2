@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // import image
 import Plush from "../img/Plush.png";
 import VectorPlan from "../img/VectorPlan.png";
 import bell1 from "../img/bell1.png";
+import Compass from "../img/Compass.png";
 
 export default function NavbarRight() {
   return (
@@ -38,7 +40,6 @@ export default function NavbarRight() {
                   border: "none",
                   padding: "10px",
                   background: "#232323",
-                  borderRadius: "3px",
                 }}
               />
             </form>
@@ -71,13 +72,17 @@ export default function NavbarRight() {
               alt=""
               style={{ marginLeft: "25px", cursor: "pointer" }}
             />
-            <div
-              className="btnCreatePost"
+            <Link
+              to="/createpost"
+              className="btn1"
               style={{
                 alignItems: "center",
                 display: "flex",
                 justifyContent: "center",
                 marginLeft: "25px",
+                textDecoration: "none",
+                width: "130px",
+                height: "33px",
               }}
             >
               <img src={Plush} alt="+" title="+" placeholder="+" />
@@ -89,7 +94,7 @@ export default function NavbarRight() {
               >
                 <strong>Create post</strong>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
