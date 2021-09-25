@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 // import css
 import "./css/StyleApp.css";
@@ -10,9 +10,6 @@ import {
   Route,
   useHistory,
 } from "react-router-dom";
-
-// import bootstrap components
-import { Container } from "react-bootstrap";
 
 // import components
 import PrivateRoute from "./components/PrivateRoute";
@@ -30,6 +27,8 @@ import { AppContext } from "./contexts/GlobalContext";
 import NotFound from "./pages/NotFound";
 import Landing from "./pages/Landing";
 import HomeUser from "./pages/HomeUser";
+import HomeUserExplore from "./pages/HomeUserExplore";
+import Explore from "./pages/Explore";
 
 // CheckTokenInLocalStorageIsExist
 if (localStorage.token) {
@@ -74,6 +73,7 @@ export default function AppProject() {
         <Switch>
           <Route exact path="/" component={Landing} />
           <PrivateRoute exact path="/homeuser" component={HomeUser} />
+          <PrivateRoute exact path="/explore" component={HomeUserExplore} />
 
           {/* PageNotFound */}
           <Route component={NotFound} />

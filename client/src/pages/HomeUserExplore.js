@@ -6,9 +6,9 @@ import BrandLeft from "../components/BrandLeft";
 import NavbarRight from "../components/NavbarRight";
 
 // import pages
-import Feed from "./Feed";
+import Explore from "./Explore";
 
-export default function HomeUser() {
+export default function HomeUserExplore() {
   return (
     <div
       style={{
@@ -52,7 +52,7 @@ export default function HomeUser() {
         {/* EndNavbarRight */}
 
         {/* ContentRight */}
-        <Feed />
+        <Explore />
         {/* EndContentRight */}
       </div>
       {/* EndRight */}

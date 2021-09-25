@@ -94,7 +94,7 @@ export default function Landing({ stateLogin, setStateLogin }) {
             <Col md={1}></Col>
             <Col md={6}>
               <Row>
-                <Col md={3} style={{}}>
+                <Col md={4}>
                   <Row>
                     <img src={Rectangle6} alt="" className="cardImg" />
                   </Row>
@@ -105,7 +105,7 @@ export default function Landing({ stateLogin, setStateLogin }) {
                     <img src={Rectangle10} alt="" className="cardImg" />
                   </Row>
                 </Col>
-                <Col md={3} style={{}}>
+                <Col md={4}>
                   <Row>
                     <img src={Rectangle3} alt="" className="cardImg" />
                   </Row>
@@ -113,7 +113,7 @@ export default function Landing({ stateLogin, setStateLogin }) {
                     <img src={Rectangle9} alt="" className="cardImg" />
                   </Row>
                 </Col>
-                <Col md={3} style={{}}>
+                <Col md={4}>
                   <Row>
                     <img src={Rectangle4} alt="" className="cardImg" />
                   </Row>
