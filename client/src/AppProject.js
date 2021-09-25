@@ -30,6 +30,7 @@ import HomeUser from "./pages/HomeUser";
 import HomeUserExplore from "./pages/HomeUserExplore";
 import HomeUserCreatePost from "./pages/HomeUserCreatePost";
 import HomeUserEditProfile from "./pages/HomeUserEditProfile";
+import HomeFriendFeed from "./pages/HomeFriendFeed";
 
 // CheckTokenInLocalStorageIsExist
 if (localStorage.token) {
@@ -75,6 +76,7 @@ export default function AppProject() {
           <Route exact path="/" component={Landing} />
           <PrivateRoute exact path="/homeuser" component={HomeUser} />
           <PrivateRoute exact path="/explore" component={HomeUserExplore} />
+          <PrivateRoute exact path="/homefriend" component={HomeFriendFeed} />
           <PrivateRoute
             exact
             path="/createpost"

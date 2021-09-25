@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Card, CardColumns } from "react-bootstrap";
 
 // import img
@@ -33,14 +32,13 @@ export default function Feed() {
                 paddingBottom: "5px",
               }}
             >
-              <Link
-                to="/homefriend"
+              <div
                 style={{
                   alignItems: "center",
                   display: "flex",
                   justifyContent: "left",
                   width: "100px",
-                  textDecoration: "none",
+                  cursor: "pointer",
                 }}
               >
                 <img
@@ -54,7 +52,7 @@ export default function Feed() {
                   }}
                 />
                 <span style={{ marginLeft: "10px", color: "#fff" }}>Jhon</span>
-              </Link>
+              </div>
               <div
                 style={{
                   alignItems: "center",

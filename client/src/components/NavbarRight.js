@@ -35,11 +35,12 @@ export default function NavbarRight() {
                 className="colorText1"
                 style={{
                   width: "400px",
-                  height: "33px",
                   border: "none",
                   padding: "10px",
                   background: "#232323",
                   borderRadius: "5px",
+                  paddingTop: "5px",
+                  paddingBottom: "7px",
                 }}
               />
             </form>
@@ -82,7 +83,8 @@ export default function NavbarRight() {
                 marginLeft: "25px",
                 textDecoration: "none",
                 width: "130px",
-                height: "33px",
+                paddingTop: "8px",
+                paddingBottom: "8px",
               }}
             >
               <img src={Plush} alt="+" title="+" placeholder="+" />

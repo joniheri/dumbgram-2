@@ -163,6 +163,17 @@ div.right:hover {
   border: none;
 }
 
+.btn2 {
+  background: #363536;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn2:hover {
+  background: #232323;
+}
+
 .input1 {
   color: #ababab;
   font-size: 20px;
