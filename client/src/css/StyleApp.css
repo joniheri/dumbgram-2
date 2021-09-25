@@ -164,11 +164,15 @@ div.right:hover {
 }
 
 .input1 {
+  color: #ababab;
+  font-size: 20px;
   width: 100%;
   background: #232323;
   border: 1px solid #ababab;
   border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;
-  color: #ababab;
+  padding-top: 7px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }

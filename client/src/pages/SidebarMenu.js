@@ -40,16 +40,18 @@ export default function SidebarMenu() {
             justifyContent: "right",
           }}
         >
-          <img
-            src={Edit}
-            alt=""
-            style={{
-              width: "24px",
-              height: "24px",
-              objectFit: "cover",
-              cursor: "pointer",
-            }}
-          />
+          <Link to="/editprofile">
+            <img
+              src={Edit}
+              alt=""
+              style={{
+                width: "24px",
+                height: "24px",
+                objectFit: "cover",
+                cursor: "pointer",
+              }}
+            />
+          </Link>
         </Col>
         <Col md={1}></Col>
       </Row>

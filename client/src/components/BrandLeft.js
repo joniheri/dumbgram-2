@@ -12,18 +12,18 @@ export default function BrandLeft() {
     <div>
       <Row style={{ paddingTop: "10px", paddingBottom: "20px" }}>
         <Col>
-          <img
-            as={Link}
-            to="/homeuser"
-            src={DumbGram}
-            alt=""
-            style={{
-              height: "39px",
-              width: "auto",
-              paddingLeft: "10px",
-              cursor: "pointer",
-            }}
-          />
+          <Link to="/homeuser">
+            <img
+              src={DumbGram}
+              alt=""
+              style={{
+                height: "39px",
+                width: "auto",
+                paddingLeft: "10px",
+                cursor: "pointer",
+              }}
+            />
+          </Link>
         </Col>
       </Row>
     </div>

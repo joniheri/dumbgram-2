@@ -29,6 +29,7 @@ import Landing from "./pages/Landing";
 import HomeUser from "./pages/HomeUser";
 import HomeUserExplore from "./pages/HomeUserExplore";
 import HomeUserCreatePost from "./pages/HomeUserCreatePost";
+import HomeUserEditProfile from "./pages/HomeUserEditProfile";
 
 // CheckTokenInLocalStorageIsExist
 if (localStorage.token) {
@@ -78,6 +79,11 @@ export default function AppProject() {
             exact
             path="/createpost"
             component={HomeUserCreatePost}
+          />
+          <PrivateRoute
+            exact
+            path="/editprofile"
+            component={HomeUserEditProfile}
           />
 
           {/* PageNotFound */}

@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Plush from "../img/Plush.png";
 import VectorPlan from "../img/VectorPlan.png";
 import bell1 from "../img/bell1.png";
-import Compass from "../img/Compass.png";
 
 export default function NavbarRight() {
   return (
@@ -35,11 +34,12 @@ export default function NavbarRight() {
                 placeholder="Search"
                 className="colorText1"
                 style={{
-                  width: "310px",
+                  width: "400px",
                   height: "33px",
                   border: "none",
                   padding: "10px",
                   background: "#232323",
+                  borderRadius: "5px",
                 }}
               />
             </form>
