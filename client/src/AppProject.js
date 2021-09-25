@@ -31,6 +31,8 @@ import HomeUserExplore from "./pages/HomeUserExplore";
 import HomeUserCreatePost from "./pages/HomeUserCreatePost";
 import HomeUserEditProfile from "./pages/HomeUserEditProfile";
 import HomeFriendFeed from "./pages/HomeFriendFeed";
+import HomeMessage from "./pages/HomeMessage";
+import HomeMessageSelected from "./pages/HomeMessageSelected";
 
 // CheckTokenInLocalStorageIsExist
 if (localStorage.token) {
@@ -77,6 +79,12 @@ export default function AppProject() {
           <PrivateRoute exact path="/homeuser" component={HomeUser} />
           <PrivateRoute exact path="/explore" component={HomeUserExplore} />
           <PrivateRoute exact path="/homefriend" component={HomeFriendFeed} />
+          <PrivateRoute exact path="/homemessage" component={HomeMessage} />
+          <PrivateRoute
+            exact
+            path="/homemessageselected"
+            component={HomeMessageSelected}
+          />
           <PrivateRoute
             exact
             path="/createpost"

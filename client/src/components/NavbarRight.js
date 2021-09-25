@@ -68,11 +68,13 @@ export default function NavbarRight() {
               alt=""
               style={{ marginLeft: "25px", cursor: "pointer" }}
             />
-            <img
-              src={VectorPlan}
-              alt=""
-              style={{ marginLeft: "25px", cursor: "pointer" }}
-            />
+            <Link to="/homemessage" style={{ textDecoration: "none" }}>
+              <img
+                src={VectorPlan}
+                alt=""
+                style={{ marginLeft: "25px", cursor: "pointer" }}
+              />
+            </Link>
             <Link
               to="/createpost"
               className="btn1"

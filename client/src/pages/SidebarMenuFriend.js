@@ -9,8 +9,7 @@ import { useHistory, Link } from "react-router-dom";
 import { AppContext } from "../contexts/GlobalContext";
 
 // import img
-import Edit from "../img/edit.png";
-import Rectangle4 from "../img/Rectangle 4.png";
+import Rectangle5 from "../img/Rectangle 5.png";
 import Home from "../img/Home.png";
 import Compass from "../img/Compass.png";
 import Exit from "../img/Exit.png";
@@ -41,7 +40,7 @@ export default function SidebarMenu() {
           }}
         >
           <img
-            src={JonHeri}
+            src={Rectangle5}
             alt=""
             style={{
               width: "150px",
